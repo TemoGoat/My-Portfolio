@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}Home - My Portfolio{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+
+    <div class="row g-3 justify-content-center">
+        <div class="col-12 col-lg-6">
+            <a href="{{ url_for('photo_details', photo_id=54) }}" class="text-decoration-none text-dark d-block h-100">
+                <div class="poster-card h-100">
+                    <div class="ratio ratio-16x9">
+                        <img src="{{ url_for('static', filename='images/Sword 6.png') }}"
+                             alt="Wide Card 1" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                    </div>
+                    <h5 class="text-center mt-2">3D</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col-12 col-lg-6">
+            <a href="{{ url_for('photo_details', photo_id=55) }}" class="text-decoration-none text-dark d-block h-100">
+                <div class="poster-card h-100">
+                    <div class="ratio ratio-16x9">
+                        <img src="{{ url_for('static', filename='images/Sword 7 DC.png') }}"
+                             alt="Wide Card 2" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                    </div>
+                    <h5 class="text-center mt-2">3D</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Extra A4 Posters -->
+    <div class="row g-3 justify-content-center mt-4">
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="poster-card a4-card">
+                <a href="{{ url_for('photo_details', photo_id=76) }}">
+                    <img src="{{ url_for('static', filename='images/Art/mothra.png') }}" alt="">
+                </a>
+                <h5>Art Poster</h5>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="poster-card a4-card">
+                <a href="{{ url_for('photo_details', photo_id=47) }}">
+                    <img src="{{ url_for('static', filename='images/CarPosters/BMW M4.jpg') }}" alt="">
+                </a>
+                <h5>Car Poster</h5>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="poster-card a4-card">
+                <a href="{{ url_for('photo_details', photo_id=20) }}">
+                    <img src="{{ url_for('static', filename='images/RetroPosters/CD DISK.jpg') }}" alt="">
+                </a>
+                <h5>Retro Poster</h5>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="poster-card a4-card">
+                <a href="{{ url_for('photo_details', photo_id=19) }}">
+                    <img src="{{ url_for('static', filename='images/SportPosters/UFC.png') }}" alt="">
+                </a>
+                <h5>UFC Poster</h5>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="poster-card a4-card">
+                <a href="{{ url_for('photo_details', photo_id=21) }}">
+                    <img src="{{ url_for('static', filename='images/RetroPosters/CYBER.png') }}" alt="">
+                </a>
+                <h5>Retro Poster</h5>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="poster-card a4-card">
+                <a href="{{ url_for('photo_details', photo_id=4) }}">
+                    <img src="{{ url_for('static', filename='images/JetPosters/F-15 Poster.png') }}" alt="F-15 Poster">
+                </a>
+                <h5>Jet Poster</h5>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="footer mt-5 py-4">
+    <div class="container d-flex justify-content-center">
+        <div class="social-icons d-flex">
+            <a href="https://vislyproject.onrender.com/" target="_blank" class="text-light mx-3" style="color: white;">
+                <i class="bi bi-global"></i>
+            </a>
+            <a href="https://discord.gg/npTPnnnZ" target="_blank" class="text-light mx-3">
+                <i class="bi bi-discord"></i>
+            </a>
+            <a href="https://www.behance.net/temogorgadze" target="_blank" class="text-light mx-3">
+                <i class="bi bi-behance"></i>
+            </a>
+            <a href="https://www.pinterest.com/TemoGoat/" target="_blank" class="text-light mx-3">
+                <i class="bi bi-pinterest"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+{% endblock %}

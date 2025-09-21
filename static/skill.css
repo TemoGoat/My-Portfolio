@@ -1,0 +1,180 @@
+.skills-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* სათაურის სტილი */
+.section-title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    color: #fff; /* ფოტოზე შავი იყო, მაგრამ თქვენს ფონს თეთრი უფრო მოუხდება */
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+/* უნარების ბადე (Grid) */
+.skills-grid {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 15px;
+}
+/* ცალკეული უნარის ბლოკი */
+.skill-item {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* იკონის ყუთი */
+.icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.icon-box img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+/* ვარსკვლავების სტილი */
+.stars {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="%23f7c50a" d="M259.3 17.8L194 150.3 47.1 173.1a32 32 0 0 0-18.1 54.1l109.9 107.8-25.5 152.2a32 32 0 0 0 46.4 33.7L288 438.8l129.4 68a32 32 0 0 0 46.4-33.7l-25.5-152.2 109.9-107.8a32 32 0 0 0-18.1-54.1L382 150.3 316.7 17.8a32 32 0 0 0-57.4 0z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.star.filled {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="%23f7c50a" d="M259.3 17.8L194 150.3 47.1 173.1a32 32 0 0 0-18.1 54.1l109.9 107.8-25.5 152.2a32 32 0 0 0 46.4 33.7L288 438.8l129.4 68a32 32 0 0 0 46.4-33.7l-25.5-152.2 109.9-107.8a32 32 0 0 0-18.1-54.1L382 150.3 316.7 17.8a32 32 0 0 0-57.4 0z"/></svg>');
+}
+
+.star.half-filled {
+    background: linear-gradient(to right, #f7c50a 50%, #d4d4d4 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    line-height: 1;
+    content: '★';
+}
+
+.star.empty {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="%23d4d4d4" d="M259.3 17.8L194 150.3 47.1 173.1a32 32 0 0 0-18.1 54.1l109.9 107.8-25.5 152.2a32 32 0 0 0 46.4 33.7L288 438.8l129.4 68a32 32 0 0 0 46.4-33.7l-25.5-152.2 109.9-107.8a32 32 0 0 0-18.1-54.1L382 150.3 316.7 17.8a32 32 0 0 0-57.4 0z"/></svg>');
+}
+
+/* მობილურის ადაპტაცია */
+@media (max-width: 576px) {
+    .icon-box {
+        width: 60px;
+        height: 60px;
+    }
+    .star {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+/* უზრუნველყოფს კონტეინერის სრულ სიმაღლეს და ცენტრში განთავსებას */
+.about-container {
+    min-height: 100vh;
+
+}
+
+/* სათაურის სტილი */
+.section-title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+/* სოციალური ქსელების ბადე */
+.social-icons-grid {
+    width: 100%;
+    max-width: 800px;
+    padding: 0 15px;
+    margin-bottom: 40px;
+}
+
+/* ცალკეული სოციალური ქსელის ბლოკი */
+.social-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-item a {
+    text-decoration: none;
+    color: #fff; /* ტექსტის ფერი */
+    display: block;
+}
+
+/* აიქონის ყუთი */
+.social-item .icon-box {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+    background-color: #f0f0f0; /* ფონის ფერი */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-item .icon-box i {
+    font-size: 2.5rem;
+    color: #000; /* იკონის ფერი */
+}
+
+/* ელ. ფოსტის განყოფილება */
+.email-section {
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.email-section a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.framed-text {
+    border: 2px solid #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 1200px;
+    letter-spacing: 0.5px;
+}

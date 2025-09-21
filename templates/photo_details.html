@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Photo Detail{% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10 text-center">
+            <h2 class="mb-4">{{ photo.title }}</h2>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-5 d-flex justify-content-center align-items-center">
+            <img src="{{ url_for('static', filename=photo.filename) }}"
+                 alt="{{ photo.title }}"
+                 class="img-fluid rounded shadow-sm">
+        </div>
+
+        <div class="col-md-5 d-flex align-items-center">
+            <ul class="list-unstyled ms-3">
+                <li><strong>Date:</strong> {{ photo.date }}</li>
+                <li><strong>Link: </strong> <a href="{{ photo.link }}" target="_blank">{{ photo.link }}</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-10 text-center">
+            <a href="{{ url_for('home') }}"
+               class="btn mt-4"
+               style="background-color: #dc3545; color: white; border-radius: 30px; padding: 10px 20px; transition: 0.3s;"
+               onmouseover="this.style.backgroundColor='#bb2d3b'"
+               onmouseout="this.style.backgroundColor='#dc3545'">
+                ← Back
+            </a>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

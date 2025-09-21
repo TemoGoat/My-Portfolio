@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Main{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='skill.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+</head>
+<body>
+
+<!-- Header -->
+{% block header %}
+<div class="top-bar d-flex justify-content-between align-items-center px-3 mb-3">
+    <div class="social-icons d-flex">
+
+    <a href="https://www.behance.net/temogorgadze" target="_blank">
+        <i class="bi bi-behance me-3"></i>
+    </a>
+
+    <a href="https://discord.gg/npTPnnnZ" target="_blank">
+        <i class="bi bi-discord me-3"></i>
+    </a>
+
+    <a href="https://www.pinterest.com/TemoGoat/" target="_blank">
+        <i class="bi bi-pinterest"></i>
+    </a>
+
+</div>
+
+    <div class="nav-links d-flex justify-content-center">
+        <a href="{{ url_for('home') }}" class="gradient-btn">Temo Gorgadze</a>
+        <a href="{{ url_for('skills') }}" class="gradient-btn">Skills</a>
+    </div>
+
+
+</div>
+<div id="posterCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+        <!-- Slide 1 (პირველი 4 ბარათი) -->
+        <div class="carousel-item active">
+            <div class="row g-3 justify-content-center">
+                <!-- Sport Posters -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="blur-card" onclick="location.href='{{ url_for('sport_posters') }}'">
+                        <img src="{{ url_for('static', filename='images/SportPosters/GEO4.jpg') }}" alt="">
+                        <h5>Sport Posters</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="blur-card" onclick="location.href='{{ url_for('jet_posters') }}'">
+                        <img src="{{ url_for('static', filename='images/JetPosters/F-15 Poster.png') }}"
+                             alt="Jet Posters">
+                        <h5>Jet Posters</h5>
+                    </div>
+                </div>
+                <!-- Retro Posters -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="blur-card" onclick="location.href='{{ url_for('retro_posters') }}'">
+                        <img src="{{ url_for('static', filename='images/RetroPosters/CD DISK.jpg') }}"
+                             alt="">
+                        <h5>Retro Posters</h5>
+                    </div>
+                </div>
+                <!-- New Posters -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="blur-card" onclick="location.href='{{ url_for('car_posters') }}'">
+                        <img src="{{ url_for('static', filename='images/CarPosters/BMW M4.jpg') }}"
+                             alt="">
+                        <h5>Cars Posters</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 (შემდეგი 4 ბარათი) -->
+        <div class="carousel-item">
+            <div class="row g-3 justify-content-center">
+                <div class="col-6 col-md-4 col-lg-3">
+
+                    <div class="blur-card" onclick="location.href='/3d_models'">
+                        <img src="{{ url_for('static', filename='images/Sword 7 DC.png') }}" alt="">
+                        <h5>3D Models</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+
+                    <div class="blur-card" onclick="location.href='/my-website'">
+                        <img src="{{ url_for('static', filename='images/MAIN PAGE.png') }}" alt="">
+                        <h5>My Other Website</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+
+                    <div class="blur-card" onclick="location.href='/art'">
+                        <img src="{{ url_for('static', filename='images/Art/Creative.png') }}" alt="">
+                        <h5>Art Posters</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+
+                    <div class="blur-card" onclick="location.href='/logo'">
+                        <img src="{{ url_for('static', filename='images/Logos/Flower.png') }}" alt="">
+                        <h5>Logos</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- კონტროლერები -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#posterCarousel" data-bs-slide="prev"
+            style="left: -100px;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">წინა</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#posterCarousel" data-bs-slide="next"
+            style="right: -100px;">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">შემდეგი</span>
+    </button>
+
+
+</div>
+
+
+{% endblock %}
+
+{% block content %}{% endblock %}
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

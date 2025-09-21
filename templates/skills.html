@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %}Skills - My Portfolio{% endblock %}
+
+{% block content %}
+
+
+<div class="skills-container d-flex flex-column justify-content-center align-items-center">
+
+    <div class="about-me-section">
+        <div class="section-title">
+            <h2>About Me</h2>
+        </div>
+
+        <div class="framed-text">
+            <p>With 2 years of hands-on experience in the design field, I am a dedicated and detail-oriented
+                professional passionate about creating visually compelling and effective work. My journey has equipped
+                me with a strong foundation in a variety of design tools, including Adobe Photoshop, Illustrator,
+                Premiere Pro, and more.
+
+                I specialize in [your specialty, e.g., graphic design, digital art, video editing] and am committed to
+                producing high-quality results that exceed client expectations. My experience has taught me to not only
+                focus on aesthetics but also on the practical application and purpose of each project.
+
+                I am always eager to take on new challenges and continuously improve my skills to stay at the forefront
+                of the creative industry.</p>
+        </div>
+
+        <div class="email-section">
+            <p>Email: <a href="mailto:temukagorgadze74@gmail.com">temukagorgadze74@gmail.com</a></p>
+        </div>
+
+        <div class="section-title">
+            <h2>Skills</h2>
+        </div>
+
+
+        <div class="skills-grid d-flex justify-content-center flex-wrap">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item">
+                <div class="icon-box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/2048px-Adobe_Photoshop_CC_icon.svg.png"
+                         alt="Photoshop">
+                </div>
+                <div class="stars" data-rating="5">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item">
+                <div class="icon-box">
+                    <img src="{{ url_for('static', filename='images/ADOBEIL.png') }}" alt="Illustrator">
+                </div>
+                <div class="stars" data-rating="3.5">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star empty"></span>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item">
+                <div class="icon-box">
+                    <img src="{{ url_for('static', filename='images/AE.png') }}" alt="After Effects">
+                </div>
+                <div class="stars" data-rating="2">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star empty"></span>
+                    <span class="star empty"></span>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item">
+                <div class="icon-box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/2048px-Adobe_Premiere_Pro_CC_icon.svg.png"
+                         alt="Premiere Pro">
+                </div>
+                <div class="stars" data-rating="2">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star empty"></span>
+                    <span class="star empty"></span>
+                    <span class="star empty"></span>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item">
+                <div class="icon-box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Adobe_InDesign_CC_icon.svg/2048px-Adobe_InDesign_CC_icon.svg.png"
+                         alt="InDesign">
+                </div>
+                <div class="stars" data-rating="4.5">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star empty"></span>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item">
+                <div class="icon-box">
+                    <img src="{{ url_for('static', filename='images/AdobeXD.png') }}" alt="XD">
+                </div>
+                <div class="stars" data-rating="4.5">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star empty"></span>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item">
+                <div class="icon-box">
+                    <img src="{{ url_for('static', filename='images/BLENDER.png') }}" alt="XD">
+                </div>
+                <div class="stars" data-rating="4.5">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star empty"></span>
+                    <span class="star empty"></span>
+                    <span class="star empty"></span>
+                </div>
+
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item">
+                <div class="icon-box">
+                    <img src="{{ url_for('static', filename='images/COREL.png') }}" alt="XD">
+                </div>
+                <div class="stars" data-rating="4.5">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star empty"></span>
+                    <span class="star empty"></span>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item">
+                <div class="icon-box">
+                    <img src="{{ url_for('static', filename='images/FGIMA.svg') }}" alt="XD">
+                </div>
+                <div class="stars" data-rating="4.5">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star empty"></span>
+                </div>
+            </div>
+        </div>
+{% endblock %}
